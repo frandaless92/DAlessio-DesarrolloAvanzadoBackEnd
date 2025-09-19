@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title": "Auriculares Pro",
+    "description": "Over-ear con cancelación de ruido",
+    "code": "HP-900",
+    "price": 120000,
+    "status": true,
+    "stock": 15,
+    "category": "audio",
+    "thumbnails": [
+      "/img/auris1.jpg",
+      "/img/auris2.jpg"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Pro",
+    "description": "Over-ear con cancelación de ruido",
+    "code": "HP-900b",
+    "price": 120000,
+    "status": true,
+    "stock": 15,
+    "category": "audio",
+    "thumbnails": [
+      "/img/auris1.jpg",
+      "/img/auris2.jpg"
+    ]
+  }
+]
