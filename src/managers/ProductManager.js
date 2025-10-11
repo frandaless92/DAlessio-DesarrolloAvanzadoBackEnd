@@ -37,30 +37,7 @@ export default class ProductManager {
   }
 
   async addProduct(product) {
-    const required = [
-      "title",
-      "description",
-      "code",
-      "price",
-      "status",
-      "stock",
-      "category",
-    ];
-    for (const f of required) {
-      if (product[f] === undefined) {
-        throw new Error(`Campo requerido faltante: ${f}`);
-      }
-    }
-    if (product.thumbnails && !Array.isArray(product.thumbnails)) {
-      throw new Error("thumbnails debe ser un array de strings");
-    }
-
     const items = await this.#read();
-
-    // codigo único para cada producto
-    if (items.some((p) => p.code === product.code)) {
-      throw new Error("Código de producto ya existente");
-    }
 
     const newItem = {
       id: this.#nextId(items),
@@ -68,7 +45,7 @@ export default class ProductManager {
       description: String(product.description),
       code: String(product.code),
       price: Number(product.price),
-      status: Boolean(product.status),
+      status: product.status === undefined ? true : Boolean(product.status),
       stock: Number(product.stock),
       category: String(product.category),
       thumbnails: Array.isArray(product.thumbnails) ? product.thumbnails : [],

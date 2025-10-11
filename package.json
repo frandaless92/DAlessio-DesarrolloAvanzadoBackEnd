@@ -1,16 +1,19 @@
 {
-  "name": "entrega1-dalessio-dabi",
+  "name": "entrega2-dalessio-dabi",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/app.js"
+    "run": "node src/app.js",
+    "dev": "node --watch src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.2",
+    "socket.io": "^4.8.1"
   },
   "type": "module"
 }

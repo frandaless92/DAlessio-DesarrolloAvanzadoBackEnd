@@ -1,30 +1,119 @@
 [
   {
-    "id": "1",
-    "title": "Auriculares Pro",
-    "description": "Over-ear con cancelación de ruido",
-    "code": "HP-900",
-    "price": 120000,
+    "id": "2",
+    "title": "Teclado Mecánico RGB",
+    "description": "Formato TKL (sin pad numérico) con switches Brown.",
+    "code": "TKG-001",
+    "price": 85000,
     "status": true,
-    "stock": 15,
-    "category": "audio",
+    "stock": 25,
+    "category": "teclados",
     "thumbnails": [
-      "/img/auris1.jpg",
-      "/img/auris2.jpg"
+      "/assets/img/teclado1.webp"
     ]
   },
   {
-    "id": "2",
-    "title": "Pro",
-    "description": "Over-ear con cancelación de ruido",
-    "code": "HP-900b",
-    "price": 120000,
+    "id": "3",
+    "title": "Mouse Gamer Inalámbrico",
+    "description": "Sensor óptico de 16000 DPI y 6 botones programables.",
+    "code": "MW-550",
+    "price": 45000,
     "status": true,
-    "stock": 15,
+    "stock": 30,
+    "category": "mouses",
+    "thumbnails": [
+      "/assets/img/mouse1.webp"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Monitor Curvo 27\"",
+    "description": "Panel VA con resolución 1440p y 165Hz de tasa de refresco.",
+    "code": "MON-C27-165",
+    "price": 250000,
+    "status": true,
+    "stock": 10,
+    "category": "monitores",
+    "thumbnails": [
+      "/assets/img/monitor1.jpg"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Webcam Full HD 1080p",
+    "description": "Cámara web con micrófono estéreo y corrección de luz automática.",
+    "code": "WC-1080P",
+    "price": 38000,
+    "status": true,
+    "stock": 50,
+    "category": "webcams",
+    "thumbnails": [
+      "/assets/img/webcam1.webp"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Mousepad XL",
+    "description": "Superficie de tela para control, 900x400mm, base antideslizante.",
+    "code": "MP-XL-01",
+    "price": 15000,
+    "status": true,
+    "stock": 100,
+    "category": "accesorios",
+    "thumbnails": [
+      "/assets/img/mousepad1.jpg"
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Monitor 24\" IPS",
+    "description": "Panel IPS con colores precisos, 75Hz, ideal para diseño gráfico.",
+    "code": "MON-IPS24-75",
+    "price": 180000,
+    "status": true,
+    "stock": 12,
+    "category": "monitores",
+    "thumbnails": [
+      "/assets/img/monitor2.webp"
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Tarjeta Gráfica RTX 4060",
+    "description": "8GB GDDR6, ideal para gaming en 1080p y creación de contenido.",
+    "code": "GPU-NV-4060",
+    "price": 450000,
+    "status": true,
+    "stock": 5,
+    "category": "componentes",
+    "thumbnails": [
+      "/assets/img/gpu1.webp"
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Micrófono Condensador USB",
+    "description": "Perfecto para streaming y podcasts, con patrón polar cardioide.",
+    "code": "MIC-USB-C1",
+    "price": 65000,
+    "status": true,
+    "stock": 22,
     "category": "audio",
     "thumbnails": [
-      "/img/auris1.jpg",
-      "/img/auris2.jpg"
+      "/assets/img/mic1.jpg"
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Silla Gamer Ergonómica",
+    "description": "Reclinable hasta 180 grados, con soporte lumbar y cervical.",
+    "code": "CHR-GM-ERG",
+    "price": 195000,
+    "status": true,
+    "stock": 8,
+    "category": "accesorios",
+    "thumbnails": [
+      "/assets/img/silla1.webp"
     ]
   }
 ]
