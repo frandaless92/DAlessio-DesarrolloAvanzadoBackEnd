@@ -102,18 +102,5 @@
     "thumbnails": [
       "/assets/img/mic1.jpg"
     ]
-  },
-  {
-    "id": "10",
-    "title": "Silla Gamer Ergonómica",
-    "description": "Reclinable hasta 180 grados, con soporte lumbar y cervical.",
-    "code": "CHR-GM-ERG",
-    "price": 195000,
-    "status": true,
-    "stock": 8,
-    "category": "accesorios",
-    "thumbnails": [
-      "/assets/img/silla1.webp"
-    ]
   }
 ]

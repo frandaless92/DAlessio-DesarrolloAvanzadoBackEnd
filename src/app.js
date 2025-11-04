@@ -4,11 +4,11 @@ import { engine } from "express-handlebars";
 import productsRouter from "./routes/ProductsRoutes.js";
 import cartsRouter from "./routes/CartsRoutes.js";
 import viewsRouter from "./routes/viewsRoutes.js";
-import ProductManager from "./managers/ProductManager.js";
+import ProductMongoManager from "./managers/ProductMongoManager.js";
+import { connDB } from "./config/db.js";
 
 const app = express();
 const PORT = 8080;
-const manager = new ProductManager("src/data/products.json");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -30,10 +30,15 @@ const serverSocket = new Server(serverHTTP);
 
 serverSocket.on("connection", (socket) => {
   const updateProducts = async () => {
-    const products = await manager.getProducts();
+    const products = await ProductMongoManager.getProducts();
     serverSocket.emit("updateProducts", products);
   };
   updateProducts();
 });
+
+connDB(
+  "mongodb+srv://fndalessio_db_user:sKHTjWCRHQRJk9W8@cluster0.lsov6pi.mongodb.net/?appName=Cluster0",
+  "e-commerce"
+);
 
 export { serverSocket };

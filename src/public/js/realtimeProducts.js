@@ -64,7 +64,7 @@ socket.on("updateProducts", (products) => {
             ? `<img src="${product.thumbnails[0]}" alt="${product.title}" width="100">`
             : ""
         }
-        <button class="delete-btn" data-id="${product.id}">🗑️ Eliminar</button>
+        <button class="delete-btn" data-id="${product._id}">🗑️ Eliminar</button>
     `;
     productsList.appendChild(productElement);
   });

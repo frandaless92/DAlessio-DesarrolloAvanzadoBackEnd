@@ -1,7 +1,6 @@
 import { Router } from "express";
-import ProductManager from "../managers/ProductManager.js";
+import ProductMongoManager from "../managers/ProductMongoManager.js";
 
-const manager = new ProductManager("src/data/products.json");
 const router = Router();
 
 router.get("/realtimeproducts", async (req, res) => {
@@ -11,7 +10,8 @@ router.get("/realtimeproducts", async (req, res) => {
 });
 
 router.get("/products", async (req, res) => {
-  let products = await manager.getProducts();
+  let products = await ProductMongoManager.getProducts();
+  console.log(products);
   res.render("home", {
     products,
     style: "/assets/css/styles.css",
