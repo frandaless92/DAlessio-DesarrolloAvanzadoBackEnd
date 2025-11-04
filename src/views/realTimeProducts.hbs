@@ -32,6 +32,33 @@
 
 <hr />
 
+<h2>Filtrar Productos</h2>
+
+<form id="filterForm">
+  <label for="filterField">Campo a filtrar:</label>
+  <select id="filterField" name="filterField" required>
+    <option value="title">Título</option>
+    <option value="description">Descripción</option>
+    <option value="code">Código</option>
+    <option value="price">Precio</option>
+    <option value="stock">Stock</option>
+    <option value="category">Categoría</option>
+  </select>
+
+  <label for="filterValue">Valor a buscar (exacto):</label>
+  <input
+    type="text"
+    id="filterValue"
+    name="filterValue"
+    placeholder="Ej: Mouse, 45000, monitores..."
+    required
+  />
+
+  <button type="submit">Buscar</button>
+</form>
+
+<hr />
+
 <h2>Listado de Productos en Tiempo Real</h2>
 <ul id="productsList">
 </ul>

@@ -5,13 +5,13 @@ export default class ProductMongoManager {
     return await productModel.find(filtro).lean();
   }
 
-  static async getProductById(id) {
-    return await productModel.findById(id);
+  static async getProductBy(filtro = {}) {
+    return await productModel.findOne(filtro).lean();
   }
 
   static async addProduct(product) {
     const newProduct = await productModel.create(product);
-    return product;
+    return product.toJSON();
   }
 
   static async updateProduct(id, updatedFields) {
@@ -20,7 +20,7 @@ export default class ProductMongoManager {
       updatedFields,
       { new: true }
     );
-    return updatedProduct;
+    return updatedProduct.toJSON();
   }
 
   static async deleteProduct(id) {
