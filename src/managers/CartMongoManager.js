@@ -1,7 +1,6 @@
 import cartModel from "./models/cartsModel.js";
 
 class CartMongoManager {
-  // 🟢 CREATE - Crear un nuevo carrito
   static async createCart(data = { products: [] }) {
     try {
       const newCart = await cartModel.create(data);
@@ -12,7 +11,6 @@ class CartMongoManager {
     }
   }
 
-  // 🔵 READ - Obtener todos los carritos
   static async getCarts() {
     try {
       return await cartModel.find().populate("products.product").lean();
@@ -22,7 +20,6 @@ class CartMongoManager {
     }
   }
 
-  // 🔵 READ - Obtener carrito por ID
   static async getCartById(cartId) {
     try {
       const cart = await cartModel
@@ -37,7 +34,6 @@ class CartMongoManager {
     }
   }
 
-  // 🟠 UPDATE - Actualizar carrito completo (ej. reemplazar productos)
   static async updateCart(cartId, updateData) {
     try {
       const updatedCart = await cartModel
@@ -52,7 +48,6 @@ class CartMongoManager {
     }
   }
 
-  // 🔴 DELETE - Eliminar carrito
   static async deleteCart(cartId) {
     try {
       const deleted = await cartModel.findByIdAndDelete(cartId);

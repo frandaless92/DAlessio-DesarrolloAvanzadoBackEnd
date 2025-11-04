@@ -1,20 +1,39 @@
-<h2>Listado de Productos</h2>
-<ul>
+<h2>🛒 Catálogo de Productos</h2>
+
+<ul id="productsList" data-cart-id="{{cartId}}">
   {{#each products}}
     <li>
-      <strong>Nombre:</strong>
-      {{title}}<br />
+      <img
+        src="{{this.thumbnails}}"
+        alt="{{this.title}}"
+        style="max-width: 150px; border-radius: 8px; margin-bottom: 1rem;"
+      />
+      <strong>{{this.title}}</strong><br />
+      <span>{{this.description}}</span><br />
       <strong>Precio:</strong>
-      ${{price}}<br />
-      <strong>Descripción:</strong>
-      {{description}}<br />
-      <strong>Código:</strong>
-      {{code}}<br />
+      ${{this.price}}<br />
       <strong>Stock:</strong>
-      {{stock}}<br />
-      <strong>ID:</strong>
-      {{_id}}<br />
-      <img src="{{thumbnails}}" alt="{{title}}" width="100" />
+      {{this.stock}}<br />
+
+      <label>Cantidad:</label>
+      <input
+        type="number"
+        min="1"
+        max="{{this.stock}}"
+        value="1"
+        class="quantity-input"
+        data-pid="{{this._id}}"
+      />
+
+      <div class="actions">
+        <button class="add-btn" data-pid="{{this._id}}">Agregar al carrito</button>
+      </div>
     </li>
   {{/each}}
 </ul>
+
+<div class="center">
+  <a href="/api/views/carts/{{cartId}}" class="btn-return">⬅ Volver al carrito</a>
+</div>
+
+<script src="/js/productsList.js"></script>

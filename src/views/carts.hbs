@@ -1,0 +1,26 @@
+<h2>🛒 Carritos Existentes</h2>
+
+{{#if carts.length}}
+  <ul id="cartList">
+    {{#each carts}}
+      <li>
+        <strong>ID:</strong>
+        {{this._id}}<br />
+        <strong>Productos:</strong>
+        {{this.products.length}}<br /><br />
+        <div class="actions">
+          <a href="/api/views/carts/{{this._id}}" class="btn-view">Ver Detalle</a>
+          <button class="delete-btn" data-id="{{this._id}}">Eliminar</button>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p class="no-data">No hay carritos creados aún.</p>
+{{/if}}
+
+<div class="center">
+  <a href="/" class="btn-return">⬅ Volver al inicio</a>
+</div>
+
+<script src="/js/cartsList.js"></script>

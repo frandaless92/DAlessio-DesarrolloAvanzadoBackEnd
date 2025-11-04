@@ -4,7 +4,7 @@ const productInCartSchema = new mongoose.Schema(
   {
     product: {
       type: mongoose.Schema.Types.ObjectId, // referencia al _id de products
-      ref: "products", // nombre del modelo relacionado
+      ref: "products",
       required: true,
     },
     quantity: {
@@ -13,10 +13,9 @@ const productInCartSchema = new mongoose.Schema(
       min: [1, "La cantidad debe ser al menos 1"],
     },
   },
-  { _id: false } // no queremos un _id extra dentro de cada producto
+  { _id: false }
 );
 
-// Definimos el schema principal "cart"
 const cartSchema = new mongoose.Schema({
   products: {
     type: [productInCartSchema],
@@ -24,7 +23,6 @@ const cartSchema = new mongoose.Schema({
   },
 });
 
-// Creamos el modelo
 const cartModel = mongoose.model("carts", cartSchema);
 
 export default cartModel;

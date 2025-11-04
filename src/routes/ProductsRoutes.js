@@ -15,7 +15,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// 2️⃣ /api/products/:id → producto único
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   if (!isValidObjectId(id)) {

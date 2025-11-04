@@ -1,19 +1,22 @@
 [
   {
-    "id": "3",
     "products": [
-      {
-        "product": "1",
-        "quantity": 3
-      },
-      {
-        "product": "2",
-        "quantity": 3
-      }
+      { "product": "690a1bed6743a486d4567c2b", "quantity": 2 },
+      { "product": "690a1bed6743a486d4567c2c", "quantity": 1 },
+      { "product": "690a1bed6743a486d4567c2f", "quantity": 1 }
     ]
   },
   {
-    "id": "4",
-    "products": []
+    "products": [
+      { "product": "690a1bed6743a486d4567c30", "quantity": 1 },
+      { "product": "690a1bed6743a486d4567c2e", "quantity": 3 }
+    ]
+  },
+  {
+    "products": [
+      { "product": "690a1bed6743a486d4567c2d", "quantity": 2 },
+      { "product": "690a1bed6743a486d4567c2b", "quantity": 1 },
+      { "product": "690a1bed6743a486d4567c2e", "quantity": 1 }
+    ]
   }
 ]

@@ -1,0 +1,50 @@
+<h2>🛍️ Carrito {{cart._id}}</h2>
+
+<div class="center" style="margin-bottom: 2rem;">
+  <a href="/api/views/products?cartId={{cart._id}}" class="btn-view">➕ Agregar
+    productos</a>
+</div>
+
+{{#if cart.products.length}}
+  <ul id="productList" data-cart-id="{{cart._id}}">
+    {{#each cart.products}}
+      <li>
+        <strong>{{this.product.title}}</strong><br />
+        <strong>Precio:</strong>
+        ${{this.product.price}}<br />
+        <label>Cantidad:</label>
+        <input
+          type="number"
+          min="1"
+          value="{{this.quantity}}"
+          class="quantity-input"
+          data-pid="{{this.product._id}}"
+        />
+        <div class="actions">
+          <button
+            class="update-btn"
+            data-pid="{{this.product._id}}"
+          >Actualizar</button>
+          <button
+            class="delete-btn"
+            data-pid="{{this.product._id}}"
+          >Eliminar</button>
+        </div>
+        <img
+          src="{{this.product.thumbnails}}"
+          alt="{{this.product.title}}"
+          style="max-width: 100px; border-radius: 8px; margin-top: 1rem;"
+        />
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p class="no-data">Este carrito no contiene productos.</p>
+{{/if}}
+
+<div class="center">
+  <button id="clearCart" class="delete-btn danger">Vaciar Carrito</button>
+  <a href="/api/views/carts" class="btn-return">⬅ Volver a carritos</a>
+</div>
+
+<script src="/js/cartDetail.js"></script>

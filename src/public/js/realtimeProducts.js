@@ -4,9 +4,6 @@ const form = document.getElementById("createProductForm");
 const productsList = document.getElementById("productsList");
 const filterForm = document.getElementById("filterForm");
 
-// -------------------------------
-// 🚀 CREAR PRODUCTO
-// -------------------------------
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -49,9 +46,6 @@ form.addEventListener("submit", async (event) => {
   }
 });
 
-// -------------------------------
-// 🔎 FILTRAR PRODUCTOS
-// -------------------------------
 if (filterForm) {
   filterForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -101,9 +95,6 @@ if (filterForm) {
   });
 }
 
-// -------------------------------
-// 🔄 ACTUALIZACIÓN EN TIEMPO REAL
-// -------------------------------
 socket.on("updateProducts", (products) => {
   productsList.innerHTML = "";
 
@@ -127,9 +118,6 @@ socket.on("updateProducts", (products) => {
   });
 });
 
-// -------------------------------
-// 🗑️ ELIMINAR PRODUCTO
-// -------------------------------
 productsList.addEventListener("click", async (event) => {
   if (event.target.classList.contains("delete-btn")) {
     const productId = event.target.getAttribute("data-id");
